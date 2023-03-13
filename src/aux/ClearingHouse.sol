@@ -123,7 +123,6 @@ contract ClearingHouse {
         else revert OnlyApproved();
     }
 
-    /// @notice new operator or overseer can pull role once pushed
     function pull () external {
         if (msg.sender == pendingOverseer) {
             overseer = pendingOverseer;
